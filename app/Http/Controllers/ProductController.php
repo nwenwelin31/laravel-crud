@@ -46,6 +46,7 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         $product->save();
         return redirect()->route('product.index');
+        //return view('product.index');
 
     }
 
@@ -86,6 +87,7 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         $product->update();
         return redirect()->route('product.index');
+
     }
 
     /**

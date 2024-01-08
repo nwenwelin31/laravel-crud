@@ -25,13 +25,13 @@
                                     <td>{{ $product->size }}</td>
                                     <td>{{ $product->quantity }}</td>
                                     <td>
-                                        <a href="{{ route('product.edit',$product->id) }}" class="">
-                                            <i class="fa fa-pen"></i>
+                                        <a href="{{ route('product.edit',$product->id) }}" class="btn btn-outline-warning">
+                                            <i class="fa-regular fa-pen-to-square"></i>
                                         </a>
                                         <form action="{{ route('product.destroy',$product->id) }}" method="post" class="d-inline-block" >
                                             @method('delete')
                                             @csrf
-                                            <button type="submit">
+                                            <button type="submit" class="btn btn-outline-danger">
                                                     <i class="fa-solid fa-trash"></i>
                                             </button>
                                         </form>
